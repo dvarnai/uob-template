@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+%your details
+\title{UoB LaTeX Template}
+\author{Daniel Varnai}
+\newcommand{\degree}{MASTER OF ADVANCED COMPUTER SCIENCE} 
+\newcommand{\school}{School of Computer Science} 
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\centering\uppercase}
+  {}
+  {0pt}
+  {}
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+\begin{document}
+\input{cover}
+\input{abstract}
+\thispagestyle{empty} 
+\clearpage
+\tableofcontents
+\thispagestyle{empty} 
+\clearpage
+\setcounter{page}{1}
+
+%content goes here
+\section{Introduction}
+\lipsum[2-4]
+ 
+\section{Whatever}
+\lipsum[5-6]
+
+\section{Whatever 2}
+\lipsum[5-6]
+%content end
+ 
+\bibliographystyle{plain}
+\bibliography{mybib} 
+ 
+\end{document}
